@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 机器学习/数据挖掘/自然语言处理课程
-category: Research 
+category: Course 
 tags: ML_DM_NLP
 keywords: ML, DM, NLP
 description: 汇总机器学习，数据挖掘，自然语言处理，大数据相关课程

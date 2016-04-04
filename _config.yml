@@ -36,8 +36,8 @@ active: Tech
 
 # 首页除了最新文章外显示分类
 cates: 
-  - python 
-  - Research
+  - Python 
+  - ML_DM_NLP
 
 # 中文本地化
 locals:

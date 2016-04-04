@@ -1,6 +1,6 @@
 ---
 layout: book 
-title: CS专业经典课程书籍 
+title: CS专业经典书籍 
 category: Books
 tags: 
   - CS
