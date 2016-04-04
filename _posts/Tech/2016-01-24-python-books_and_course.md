@@ -9,6 +9,7 @@ description:
 
 ###入门书籍
 - [Learn Python The Hard Way](http://learnpythonthehardway.org/book/)
+- [python基础教程](http://www.runoob.com/python/python-tutorial.html)
 
 ###初级阶段
 
