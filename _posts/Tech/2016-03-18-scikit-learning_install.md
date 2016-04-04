@@ -5,7 +5,7 @@ title: Ubuntu下scikit-learning包的安装
 category: Tech 
 tags: 
   - scikit-learning
-  - python
+  - Python
 time: 2016.03.18 23:02:45
 excerpt: NULL
 ---

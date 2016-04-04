@@ -3,8 +3,8 @@ layout: post
 title: Longest Substring Without Repeating Characters
 category: Tech 
 tags: 
-  - cpp
-  - c
+  - CPP 
+  - C 
   - leetcode
 time: 2016.03.05 22:22:00
 excerpt: NULL
