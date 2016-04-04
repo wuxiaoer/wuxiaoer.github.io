@@ -4,8 +4,6 @@ layout: post
 title: Eclipse调试代码常用快捷键
 category: Tech 
 tags: 
-  - cpp
-  - c
   - Eclipse
 time: 2016.03.05 20:42:45
 excerpt: NULL

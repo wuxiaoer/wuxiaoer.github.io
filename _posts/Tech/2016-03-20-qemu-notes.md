@@ -4,7 +4,7 @@ layout: post
 title: QEMU代码分析
 category: Tech 
 tags: 
-  - C
+  - QEMU 
 time: 2016.03.18 23:02:45
 excerpt: NULL
 ---
