@@ -17,7 +17,7 @@ SVM: Support Vector Machine的简称, 中文名:支持向量机
 > * 缺点: 对参数调整和核函数的选择敏感, 基本SVM分类算法只能处理二类问题
 > * 处理的数据类型: 数值型和标称型
 
-## 1. SVM相关概念
+## SVM相关概念
 以下图中的数据为例,介绍SVM中涉及的相关概念
 
 ![svm-linear-separable](/public/img/svm-linear-separable.png)
@@ -46,7 +46,7 @@ SVM: Support Vector Machine的简称, 中文名:支持向量机
 ## 寻找最大间隔
 以下图中所示数据集为例
 
-![svm-maximum-margin](/public/img/svm-maximum-margin.png]
+![svm-maximum-margin](/public/img/svm-maximum-margin.png)
 
 如何衡量分割直线能最好的把给定数据集进行分割呢?
 
