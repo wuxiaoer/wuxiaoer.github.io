@@ -68,4 +68,107 @@ SMO: 序列最小优化(Sequential Minimal Optimization). SMO算法将大的优�
 
 SMO算法的目标是求出一系列的alpha和b, 一旦求出了这些alpha, 就可以很容易计算处权重向量w,并得到分割超平面.
 
+### 导入数据以及处理
+从文件中导入数据的程序如下
 
+```python
+def loadDataSet(fileName):
+    dataMat  = []
+    labelMat = []
+    fr = open(fileName)
+    for line in fr.readlines():
+        lineArr = line.strip().split('\t')
+        dataMat.append([float(lineArr[0]), float(lineArr[1])])
+        labelMat.append(float(lineArr[2]))
+    return dataMat,labelMat
+
+def selectJrand(i, m):
+    j = i #we want to select any J not equal to i
+    while (j == i):
+        j = int(random.uniform(0,m))
+    return j
+
+def clipAlpha(aj,H,L): #clips alpha values that are greater than H or less than L
+    if aj > H: 
+        aj = H
+    if L > aj:
+        aj = L
+    return aj    
+```
+
+程序解析:
+
+> readlines()函数: 一次读取整个文件, readlines() 自动将文件内容分析成一个行的列表，该列表可以由 Python 的 for ... in ... 结构进行处理
+>
+> readline()函数: 每次只读取一行，通常比 .readlines() 慢得多。仅当没有足够内存可以一次读取整个文件时，才应该使用 .readline()
+>
+> random.uniform(a, b): 用于生成一个指定范围内的随机符点数，两个参数其中一个是上限，一个是下限。如果a < b，则生成的随机数n: a <= n <= b。 如果 a > b， 则 b <= n <= a
+
+导入的数据如下图所示
+
+![svm-smo-simple-data](/public/img/svm-smo-simple-data.png)
+
+### SMO算法实现
+
+```python
+def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
+    dataMat    = mat(dataMatIn)
+    labelMat   = mat(classLabels).transpose()
+    b          = 0
+    m,n        = shape(dataMat)
+    alphas 	   = mat(zeros((m,1)))
+    iter 	   = 0
+    while (iter < maxIter):
+        alphaPairsChanged = 0
+        for i in range(m):
+            fXi = float(multiply(alphas, labelMat).T*(dataMat * dataMat[i,:].T)) + b
+            Ei = fXi - float(labelMat[i])#if checks if an example violates KKT conditions
+            if ((labelMat[i]*Ei < -toler) and (alphas[i] < C)) or ((labelMat[i]*Ei > toler) and (alphas[i] > 0)):
+                j = selectJrand(i,m)
+                fXj = float(multiply(alphas,labelMat).T*(dataMat*dataMat[j,:].T)) + b
+                Ej = fXj - float(labelMat[j])
+                alphaIold = alphas[i].copy(); alphaJold = alphas[j].copy();
+                if (labelMat[i] != labelMat[j]):
+                    L = max(0, alphas[j] - alphas[i])
+                    H = min(C, C + alphas[j] - alphas[i])
+                else:
+                    L = max(0, alphas[j] + alphas[i] - C)
+                    H = min(C, alphas[j] + alphas[i])
+                if L==H: print "L==H"; continue
+                eta = 2.0 * dataMat[i,:]*dataMat[j,:].T - dataMat[i,:]*dataMat[i,:].T - dataMat[j,:]*dataMat[j,:].T
+                if eta >= 0: print "eta>=0"; continue
+                alphas[j] -= labelMat[j]*(Ei - Ej)/eta
+                alphas[j] = clipAlpha(alphas[j],H,L)
+                if (abs(alphas[j] - alphaJold) < 0.00001): print "j not moving enough"; continue
+                alphas[i] += labelMat[j]*labelMat[i]*(alphaJold - alphas[j])#update i by the same amount as j
+                                                                        #the update is in the oppostie direction
+                b1 = b - Ei- labelMat[i]*(alphas[i]-alphaIold)*dataMat[i,:]*dataMat[i,:].T - labelMat[j]*(alphas[j]-alphaJold)*dataMat[i,:]*dataMat[j,:].T
+                b2 = b - Ej- labelMat[i]*(alphas[i]-alphaIold)*dataMat[i,:]*dataMat[j,:].T - labelMat[j]*(alphas[j]-alphaJold)*dataMat[j,:]*dataMat[j,:].T
+                if (0 < alphas[i]) and (C > alphas[i]): b = b1
+                elif (0 < alphas[j]) and (C > alphas[j]): b = b2
+                else: b = (b1 + b2)/2.0
+                alphaPairsChanged += 1
+                print "iter: %d i:%d, pairs changed %d" % (iter,i,alphaPairsChanged)
+        if (alphaPairsChanged == 0): 
+        	iter += 1
+        else: 
+        	iter = 0
+        print "iteration number: %d" % iter
+        
+    return b, alphas
+```
+
+程序解析
+
+>待补充
+
+该函数的使用
+
+```python
+
+```
+
+
+
+## 参考
+- [Python中的random模块](http://fulerbakesi.iteye.com/blog/1589097)
