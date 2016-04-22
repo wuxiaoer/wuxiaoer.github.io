@@ -12,6 +12,7 @@ description:
 - [python基础教程](http://www.runoob.com/python/python-tutorial.html)
 
 ###初级阶段
+- [Numpy Tutorial](http://www.python-course.eu/numpy.php)
 
 ###中级阶段
 
