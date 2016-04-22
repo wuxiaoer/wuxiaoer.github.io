@@ -37,7 +37,8 @@ books:
       description: This book is about the computer organization and design 
     - title: Linux System Programming - Talking Directly to the Kernel and C Library
       status: 在读
-      anthor: Robert Love
+      author: Robert Love
+      publisher_Date: 2013
       language: English
       link: https://book.douban.com/subject/20491097/
       cover: https://img3.doubanio.com/lpic/s27853763.jpg
