@@ -35,4 +35,11 @@ books:
       link: https://book.douban.com/subject/25820786
       cover: https://img3.doubanio.com/lpic/s27212095.jpg
       description: This book is about the computer organization and design 
+    - title: Linux System Programming - Talking Directly to the Kernel and C Library
+      status: 在读
+      anthor: Robert Love
+      language: English
+      link: https://book.douban.com/subject/20491097/
+      cover: https://img3.doubanio.com/lpic/s27853763.jpg
+      description: about the C library and system call of linux kernel
 ---
