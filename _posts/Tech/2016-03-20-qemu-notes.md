@@ -14,6 +14,40 @@ excerpt: NULL
 > cpu_exec <-- tcg_cpu_exec <-- tcg_exec_all <--  qemu_tcg_cpu_thread_fn <-- qemu_tcg_init_vcpu <-- qemu_init_vcpu <-- arm_cpu_realizefn
 <-- arm_cpu_class_init 
 
+## 如何获取调用的函数指针的真正地址?
+以以下程序为例
+
+```C
+void register_module_init(void (*fn)(void), module_init_type type)
+{
+    ModuleEntry *e;
+    ModuleTypeList *l;
+
+    printf("wxe:%s(%d)-<%s>: register_module_init: type = %d\n ", __FILE__, __LINE__, __FUNCTION__, type);
+
+    backtrace_symbols_fd(&fn,1,1);
+
+    e = g_malloc0(sizeof(*e));
+    e->init = fn;
+    e->type = type;
+
+    l = find_type(type);
+
+    QTAILQ_INSERT_TAIL(l, e, node);
+}
+
+```
+
+在该函数中添加了backtrace_symbols_fd函数, 那么就会打印出fn指针函数的地址
+
+那么如何根据打印的函数对应的地址找到对应的函数名称呢?方法如下:
+
+1) 首先, 对于编译生成的应用程序,调用nm命令对应用程序进行解析,找到应用程序中函数与地址之间的对应关系
+例如
+> nm qemu-system-arm
+
+2) 然后, 再根据backtrace_symbols_fd函数打印的地址, 找到对应的函数.
+
 ## main函数之前调用的函数
 在QEMU源码中,在main函数执行,通过C语言中constructor机制(![constructor])先执行了如下初始化函数
 
