@@ -3,9 +3,9 @@ layout: post
 title: python numpy学习记录
 category: Tech 
 tags: 
-    - python
+    - Python
     - numpy
-keywords: python, numpy
+keywords: Python, numpy
 description:
 ---
 
