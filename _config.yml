@@ -6,16 +6,16 @@ gems: [jekyll-paginate]
 author: 
   name: 伍小二
   email: wuxiaoer@gmail.com 
-  link: http://xiaoerwu.github.io
+  link: http://wuxiaoer.github.io
   weibo: http://weibo.com/u/1644738262
   github: http://github.com/xiaoerwu
   music: http://site.douban.com/wuxiaoer
-  linkedin: https://www.linkedin.com/pub/wuxiaoer
+  linkedin: https://cn.linkedin.com/in/xiaoer-%E4%BC%8D%E5%B0%8F%E4%BA%8C-63b7b68a
 
 # 站点信息
 title: 伍小二的博客
 description: My personal blog
-url: http://xiaoerwu.github.io
+url: http://wuxiaoer.github.io
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
