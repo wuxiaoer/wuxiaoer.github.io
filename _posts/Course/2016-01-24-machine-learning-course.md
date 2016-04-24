@@ -19,7 +19,9 @@ description: 汇总机器学习，数据挖掘，自然语言处理，大数据�
 - stanford: [cs224n:natural language processing](https://web.stanford.edu/class/cs224n/)
 
 ###深度学习
-- http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B
+- [UFLDL tutorial](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
+- [ufldl tutorial](http://ufldl.stanford.edu/tutorial/)
+- [UFLDL教程](http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B)
 - http://deeplearning.net/
 - http://deeplearning.stanford.edu/tutorial/
 
