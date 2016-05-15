@@ -22,6 +22,7 @@ description: 汇总机器学习，数据挖掘，自然语言处理，大数据�
 - [UFLDL tutorial](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
 - [ufldl tutorial](http://ufldl.stanford.edu/tutorial/)
 - [UFLDL教程](http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B)
+- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
 - http://deeplearning.net/
 - http://deeplearning.stanford.edu/tutorial/
 
