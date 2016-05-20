@@ -34,5 +34,14 @@ c   --- 功能和d相同，区别在于完成删除操作后进入INSERT MODE
 cc  --- 也是删除当前行，然后进入INSERT MODE
 ```
 
+### 翻页操作
+ctrl + d    --- 向下翻半页（d:down)
+ctrl + u    --- 向上翻半页 (u:up)
+
+ctrl + f    --- 向下翻正页 (f:forward)
+ctrl + b    --- 向上翻正页 (b:backward)
+
+
+
 ### 参考文档
 - [yavide: modern C C++ IDE over vim(经典的把VIM改造为IDE工具)](http://tuxdiary.com/2015/02/15/yavide/)
