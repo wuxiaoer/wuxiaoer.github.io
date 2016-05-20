@@ -35,12 +35,13 @@ cc  --- 也是删除当前行，然后进入INSERT MODE
 ```
 
 ### 翻页操作
+```
 ctrl + d    --- 向下翻半页（d:down)
 ctrl + u    --- 向上翻半页 (u:up)
 
 ctrl + f    --- 向下翻正页 (f:forward)
 ctrl + b    --- 向上翻正页 (b:backward)
-
+```
 
 
 ### 参考文档
