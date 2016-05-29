@@ -144,13 +144,21 @@ array([[ 11.,  22.],
 
 
 以下是theano中可用的类型
+
 - byte: bscalar, bvector, bmatrix, brow, bcol, btensor3, btensor4
+
 - 16-bit integers: wscalar, wvector, wmatrix, wrow, wcol, wtensor3, wtensor4
+
 - 32-bit integers: iscalar, ivector, imatrix, irow, icol, itensor3, itensor4
+
 - 64-bit integers: lscalar, lvector, lmatrix, lrow, lcol, ltensor3, ltensor4
+
 - float: fscalar, fvector, fmatrix, frow, fcol, ftensor3, ftensor4
+
 - double: dscalar, dvector, dmatrix, drow, dcol, dtensor3, dtensor4
+
 - complex: cscalar, cvector, cmatrix, crow, ccol, ctensor3, ctensor4
+
 
 以上列表不是相互排斥的，所有的类型和Numpy数组是兼容的，参考[tensor creation](http://deeplearning.net/software/theano/library/tensor/basic.html#libdoc-tensor-creation)
 
