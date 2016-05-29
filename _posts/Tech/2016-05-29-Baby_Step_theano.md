@@ -98,5 +98,62 @@ In [19]: print(pp(z))
 [function](http://deeplearning.net/software/theano/library/compile/function.html#function.function)的第一个参数是一个变量列表作为函数的输入。第二个参数是一个单变量或者变量列表。 第二个变量作为我们应用该函数时我们想要看的输出。然后，f的使用与普通的python函数一样。
 
 
+# 两个矩阵相加
+
+应该猜到如下做了，只要把上例中x和y的类型从dscalar修改为dmatrix即可
+
+```
+
+In [1]: import numpy as np
+
+In [2]: import theano.tensor as T
+
+In [3]: from theano import function
+
+In [4]: x = T.dmatrix('x')
+
+In [5]: y = T.dmatrix('y')
+
+In [6]: z = x + y
+
+In [7]: f = function([x, y], z)
+
+```
+
+dmatrix是double矩阵类型， 然后对2D数组使用新函数
+
+```
+In [8]: f([[1, 2], [3, 4]], [[10, 20], [30, 40]])
+Out[8]: 
+array([[ 11.,  22.],
+      [ 33.,  44.]])
+```
 
 
+变量是numpy数组， 我们可以直接使用NumPy数组作为输入：
+```
+In [9]: import numpy
+
+In [10]: f(numpy.array([[1, 2], [3, 4]]), numpy.array([[10, 20], [30, 40]]))
+Out[10]: 
+array([[ 11.,  22.],
+      [ 33.,  44.]])
+```
+
+标量和矩阵，矢量和矩阵，标量和数量的相加都是可能的。这些参数的行为参考[broadcasting](http://deeplearning.net/software/theano/library/tensor/basic.html#libdoc-tensor-broadcastable)
+
+
+以下是theano中可用的类型
+- byte: bscalar, bvector, bmatrix, brow, bcol, btensor3, btensor4
+- 16-bit integers: wscalar, wvector, wmatrix, wrow, wcol, wtensor3, wtensor4
+- 32-bit integers: iscalar, ivector, imatrix, irow, icol, itensor3, itensor4
+- 64-bit integers: lscalar, lvector, lmatrix, lrow, lcol, ltensor3, ltensor4
+- float: fscalar, fvector, fmatrix, frow, fcol, ftensor3, ftensor4
+- double: dscalar, dvector, dmatrix, drow, dcol, dtensor3, dtensor4
+- complex: cscalar, cvector, cmatrix, crow, ccol, ctensor3, ctensor4
+
+以上列表不是相互排斥的，所有的类型和Numpy数组是兼容的，参考[tensor creation](http://deeplearning.net/software/theano/library/tensor/basic.html#libdoc-tensor-creation)
+
+
+# 参考
+- [Baby Steps - Algebra](http://deeplearning.net/software/theano/tutorial/adding.html)
