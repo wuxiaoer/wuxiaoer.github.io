@@ -43,6 +43,10 @@ ctrl + f    --- 向下翻正页 (f:forward)
 ctrl + b    --- 向上翻正页 (b:backward)
 ```
 
+### 当前文本中插入时间
+```
+:r!date
+```
 
 ### 参考文档
 - [yavide: modern C C++ IDE over vim(经典的把VIM改造为IDE工具)](http://tuxdiary.com/2015/02/15/yavide/)
