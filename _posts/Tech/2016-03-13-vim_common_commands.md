@@ -44,9 +44,22 @@ ctrl + b    --- 向上翻正页 (b:backward)
 ```
 
 ### 当前文本中插入时间
+
+方法1：
+
 ```
 :r!date
 ```
 
+方法2：
+
+使用<C-r>=来输入命令。可以在插入模式下，输入Ctrl+r,然后输入=号，之后输入如下命令：strftime("%Y-%m-%d %H:%M:%S")即可。 这样会在当前光标插入对应的时间
+
+strftime后面的一串时间格式化符号很难记住，因此可以使用ab来缩写：使当我们在插入模式输入xtime时即可插入当前时间。
+在.vimrc中添加上这一行：
+iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+
 ### 参考文档
 - [yavide: modern C C++ IDE over vim(经典的把VIM改造为IDE工具)](http://tuxdiary.com/2015/02/15/yavide/)
+
+
