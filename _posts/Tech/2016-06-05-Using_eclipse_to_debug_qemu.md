@@ -88,4 +88,4 @@ qemu-system-x86\_64运行kernel时，只出现一条打印“VNC server running 
 
 
 ## 5\. 参考
-- [QUEMU安装完毕后测试arm出错：只有一行VNC server running on `127.0.0.1:5900’没其他输出]（http://www.crifan.com/qemu_test_arm_vnc_server_running_on_127_0_0_1_5900_no_other_output/）
+- [QEMU安装完毕后测试arm出错：只有一行VNC server running on \`127\.0\.0\.1\:5900\'没其他输出]（http://www.crifan.com/qemu\_test\_arm\_vnc\_server\_running\_on\_127\_0\_0\_1\_5900\_no\_other\_output/）
