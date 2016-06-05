@@ -54,9 +54,12 @@ description:
 - 4\. 构建完成在，在Qemu源码目录下的arm-softmmu和x86\_64-softmmu下生成对应的qemu可执行文件qemu-system-arm和qemu-system-x86\_64
 
 
-相关错误:
+## 4\. 相关错误
+
+### 1\. 错误1
 
 在编译Linux kernel 4.6版本时，出现如下错误：
+
 ```
 scripts/sign-file.c:25:30: fatal error: openssl/opensslv.h: No such file or directory
 compilation terminated.
@@ -67,8 +70,18 @@ make: *** [scripts] Error 2
 ```
 
 解决方法：
+
 ```
 > sudo apt-get install libssl-dev
 ```
 
+### 2\. 错误2
 
+qemu-system-x86\_64运行kernel时，只出现一条打印“VNC server running on `127.0.0.1:5900’”
+
+解决方法：
+需要安装libsdl1.2-dev
+
+> sudo apt-get install libsdl1.2-dev
+
+然后重新在qemu源代码下configure下，并进行重新编译。
