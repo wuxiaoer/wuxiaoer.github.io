@@ -9,17 +9,17 @@ description:
 
 ## 1\. 下载Qemu代码
 
-- 1\. 下载版本
+### 1\. 下载版本
 
 下载qemu-2.6.0版本代码，[下载地址](http://wiki.qemu-project.org/download/qemu-2.6.0.tar.bz2)
 
 
-- 2\. 解压
+### 2\. 解压
 
 > tar jxvg qemu-2.6.0.tar.bz2
 
 
-- 3\. 配置
+### 3\. 配置
 
 配置命令如下
 
@@ -37,21 +37,21 @@ description:
 
 ## 3\. Eclipse中导入Qemu源码。
 
-- 1\. 打开Eclipse后，执行File-\>import-\>C/C++ -\> Existing Code as Makefile Project. 点击Next
+### 1\. 打开Eclipse后，执行File-\>import-\>C/C++ -\> Existing Code as Makefile Project. 点击Next
 
 
-- 2\. 选择Qemu源码所在的目录，工具链选择Linux GCC. 如下图
+### 2\. 选择Qemu源码所在的目录，工具链选择Linux GCC. 如下图
 
   ![eclipse-import-qemu-src](/public/img/eclipse_import_cpp_project.png)
 
     
-- 3\. 然后在进行build project
+### 3\. 然后在进行build project
 
  可能会出现找不到autoreconf工具，那么安装如下package即可。
 
 > sudo apt-get install autoconf libtool
 
-- 4\. 构建完成在，在Qemu源码目录下的arm-softmmu和x86\_64-softmmu下生成对应的qemu可执行文件qemu-system-arm和qemu-system-x86\_64
+### 4\. 构建完成在，在Qemu源码目录下的arm-softmmu和x86\_64-softmmu下生成对应的qemu可执行文件qemu-system-arm和qemu-system-x86\_64
 
 
 ## 4\. 相关错误
@@ -85,3 +85,7 @@ qemu-system-x86\_64运行kernel时，只出现一条打印“VNC server running 
 > sudo apt-get install libsdl1.2-dev
 
 然后重新在qemu源代码下configure下，并进行重新编译。
+
+
+## 5\. 参考
+- [QUEMU安装完毕后测试arm出错：只有一行VNC server running on `127.0.0.1:5900’没其他输出]（http://www.crifan.com/qemu_test_arm_vnc_server_running_on_127_0_0_1_5900_no_other_output/）
