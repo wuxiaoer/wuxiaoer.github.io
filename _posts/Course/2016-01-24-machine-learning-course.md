@@ -11,6 +11,8 @@ description: 汇总机器学习，数据挖掘，自然语言处理，大数据�
 
 ###机器学习
 - stanford： [cs229:machine learning](http://cs229.stanford.edu/)
+- CMU: [Machine Learning](http://www.cs.cmu.edu/~tom/10601_fall2012/lectures.shtml)
+
 
 ###数据挖掘
 
