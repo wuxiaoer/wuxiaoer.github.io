@@ -29,7 +29,7 @@ description: 汇总机器学习，数据挖掘，自然语言处理，大数据�
 - [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)
 
 
-###深度学习
+### 深度学习
 
 - [UFLDL tutorial](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
 
