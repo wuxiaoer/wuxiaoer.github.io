@@ -20,6 +20,11 @@ description: 汇总机器学习，数据挖掘，自然语言处理，大数据�
 - stanford: [cs224u:natural langauge understanding](https://web.stanford.edu/class/cs224u/)
 - stanford: [cs224n:natural language processing](https://web.stanford.edu/class/cs224n/)
 
+- [Introduction to Information Retrieval](http://nlp.stanford.edu/IR-book/)
+
+- [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)
+
+
 ###深度学习
 - [UFLDL tutorial](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
 - [ufldl tutorial](http://ufldl.stanford.edu/tutorial/)
@@ -29,6 +34,8 @@ description: 汇总机器学习，数据挖掘，自然语言处理，大数据�
 - [deep learning tutorial](http://deeplearning.net/tutorial/)
 - [stanford deep learning](http://deeplearning.stanford.edu/tutorial/)
 
+- [Deep Learning - An MIT Press Book](http://www.deeplearningbook.org/)
+- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
 
 
 
