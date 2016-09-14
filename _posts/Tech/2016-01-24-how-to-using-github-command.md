@@ -7,10 +7,14 @@ keywords: Git, Github
 description:
 ---
 
-###常用的提交修改的命令
-```
-$ git status
-$ git add -A
-$ git commit -m "git log"
-$ git push -u origin master
-```
+### 常用的提交修改的命令
+
+> $ git status
+
+> $ git add -A
+
+> $ git commit -m "git log"
+
+> $ git push -u origin master
+
+
