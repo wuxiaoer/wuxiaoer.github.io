@@ -12,4 +12,4 @@ description: 关于语音识别，对话系统的课程
 
 课程主要涉及的内容为
 
-！[overview-of-spoken-language-processing](/public/img/cs224s_pics/overview_of_spoken_language_processing.png)
+![overview-of-spoken-language-processing](/public/img/cs224s_pics/overview_of_spoken_language_processing.png)
