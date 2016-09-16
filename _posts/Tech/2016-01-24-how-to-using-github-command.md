@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何使用git命令来管理github博客
-category: Tech 
+category: Tech
 tags: Git
 keywords: Git, Github
 description:
@@ -18,3 +18,5 @@ description:
 > $ git push -u origin master
 
 
+### 参考资料
+- [jekyll 中文网站](http://jekyll.bootcss.com/)
