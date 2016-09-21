@@ -15,5 +15,6 @@ description: distribute system
 - [6.824: Distributed Systems](http://nil.csail.mit.edu/6.824/2015)
 
 
-
-
+# audio and signal processing
+------
+- [The Scientist and Engineer's Guide to Digital Signal Processing](http://www.dspguide.com/ch9/1.htm)
